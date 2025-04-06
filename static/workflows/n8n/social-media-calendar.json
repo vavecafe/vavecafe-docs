@@ -1,0 +1,45 @@
+{
+    "nodes": [
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.manualTrigger",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ],
+        "id": "720f391f-8b46-43d1-9e6d-54cc766c9356",
+        "name": "When clicking ‘Test workflow’"
+      },
+      {
+        "parameters": {
+          "jsCode": "// Import the built-in crypto module\nconst crypto = require('crypto');\n\n// Generate 16 random bytes and convert to a hex string\nconst randomHex = crypto.randomBytes(16).toString('hex');\n\n// n8n Code nodes expect an array of objects with a 'json' key\nreturn [\n  {\n    json: {\n      testName: \"Random Bytes Generation\",\n      randomHexOutput: randomHex\n    }\n  }\n];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          220,
+          0
+        ],
+        "id": "3b072c82-4d0e-4125-be94-20c71a6c5460",
+        "name": "Code"
+      }
+    ],
+    "connections": {
+      "When clicking ‘Test workflow’": {
+        "main": [
+          [
+            {
+              "node": "Code",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "pinData": {},
+    "meta": {
+      "instanceId": "0c9eb102c4930f62e356d4cc0527eae2d9c68740c2c3ac931954261dfd40349b"
+    }
+  }

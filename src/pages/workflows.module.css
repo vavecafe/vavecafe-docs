@@ -1,0 +1,424 @@
+.workflowBrowserContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layoutToggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggleButton {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggleButton:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.toggleButton.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+/* Grid Layout */
+.workflowGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* List Layout */
+.workflowList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.workflowList .workflowCard {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.workflowList .workflowCard:hover {
+  transform: none;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.workflowList .workflowContent {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.workflowList .workflowCard h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.workflowList .workflowCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}
+
+.workflowList .platformTag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  margin: 0;
+  border-radius: 1rem;
+}
+
+.workflowList .platformTag[data-platform="n8n"] {
+  background: #FF6B6B;
+}
+
+.workflowList .platformTag[data-platform="Zapier"] {
+  background: #FF9F1C;
+}
+
+.workflowList .platformTag[data-platform="Make"] {
+  background: #845EC2;
+}
+
+.workflowList .platformTag[data-platform="Guide"] {
+  background: #2EC4B6;
+}
+
+.workflowList .platformTag[data-platform="IFTTT"] {
+  background: #4B4453;
+}
+
+.workflowList .platformTag[data-platform="Home Assistant"] {
+  background: #00B8A9;
+}
+
+.workflowList .price {
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.workflowList .actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.workflowList .button {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.workflowList .button.primary {
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+}
+
+.workflowList .button.secondary {
+  background: white;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.workflowList .button.view {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.workflowCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.workflowCard:hover {
+  transform: translateY(-4px);
+}
+
+.platformTag {
+  display: inline-block;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+.tags {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: var(--ifm-color-emphasis-200);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* .cardContent {
+  padding: 0 1.5rem 1.5rem;
+} */
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.price {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.button:first-child {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.button:last-child {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.filterControls {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.searchBox {
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.platformFilter {
+  margin-bottom: 1rem;
+}
+
+.platformFilter label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--ifm-background-color);
+}
+
+.tagFilter {
+  margin-bottom: 1rem;
+}
+
+.tagFilter label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.tagButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-color-emphasis-100);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tagButton:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.tagButton.selected {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+.topControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.leftControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sortControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortControl label {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  white-space: nowrap;
+}
+
+.sortSelect {
+  padding: 0.4rem 2rem 0.4rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: var(--ifm-background-color);
+  cursor: pointer;
+  min-width: 180px;
+}
+
+.resultCount {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Grid Layout Image Styles */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: -1.5rem -1.5rem 1rem;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.workflowCard:hover .heroImage {
+  transform: scale(1.05);
+}
+
+/* Position platform tag on the image */
+.imageContainer .platformTag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+/* List Layout Image Styles */
+.listImageContainer {
+  width: 120px;
+  height: 80px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.listImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Update card content spacing */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* .workflowCard .cardContent {
+  padding: 0 1.5rem 1.5rem;
+} */
+
+/* Ensure footer stays at bottom */
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Update list layout for images */
+.workflowList .workflowCard {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.workflowList .workflowContent {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+} 
